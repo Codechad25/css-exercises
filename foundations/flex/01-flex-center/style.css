@@ -1,4 +1,9 @@
+/* solution here www.w3schools.com/css/css3_flexbox.asp */
+
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: dodgerblue;
   border: 4px solid midnightblue;
   width: 400px;
