@@ -1,15 +1,17 @@
 .header  {
   font-family: monospace;
   background: papayawhip;
-  display: flex;
-padding: 9px;  
-  
-      
+    /* makes header thicker inline eith the solution */
+    padding: 8px;
+    /* Adding the flexbox. This applies to everything in the div, so left-links, logo, right-links. I think the main bit I missed was the justify-content */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* At his point the left and right links are still stacked - but divs in correct place */
+
 }
 
 .logo {
-  align-self: center;
-  margin: auto;
   font-size: 48px;
   font-weight: 900;
   color: tomato;
@@ -19,22 +21,14 @@ padding: 9px;
 
 ul {
   /* this removes the dots on the list items*/
-    list-style-type: none;
+  list-style-type: none;
+     /* As the div/container for the li items (on both sides) set-up as flex. SEE 'gap' */
     display: flex;
- 
-   }
+    margin: 0px; /*brings them in line*/
+    padding: 0px; /*removed cap (margin?) at ends - I'd useg margin-left/right: 0px; to do this initially :( */
+    gap: 8px; /*puts small gap between one/two/three etc.*/
 
-li {
-flex-direction: row;
-margin: 5px;
-}
 
-.left-links {
-margin-left: -45px;
-}
-
-.right-links {
-margin-right: -5px;
 }
 
 a {
